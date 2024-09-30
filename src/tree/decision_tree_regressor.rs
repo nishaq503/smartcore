@@ -95,7 +95,7 @@ pub struct DecisionTreeRegressorParameters {
 
 /// Regression Tree
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct DecisionTreeRegressor<TX: Number + PartialOrd, TY: Number, X: Array2<TX>, Y: Array1<TY>>
 {
     nodes: Vec<Node>,
