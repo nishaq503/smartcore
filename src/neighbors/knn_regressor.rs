@@ -73,7 +73,7 @@ pub struct KNNRegressorParameters<T: Number, D: Distance<Vec<T>>> {
 
 /// K Nearest Neighbors Regressor
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct KNNRegressor<TX: Number, TY: Number, X: Array2<TX>, Y: Array1<TY>, D: Distance<Vec<TX>>>
 {
     y: Option<Y>,

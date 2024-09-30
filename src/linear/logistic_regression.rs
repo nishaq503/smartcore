@@ -166,7 +166,7 @@ impl<T: Number + FloatNumber> Default for LogisticRegressionSearchParameters<T> 
 
 /// Logistic Regression
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct LogisticRegression<
     TX: Number + FloatNumber + RealNumber,
     TY: Number + Ord,

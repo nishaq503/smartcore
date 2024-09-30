@@ -69,7 +69,7 @@ use crate::rand_custom::get_rng_impl;
 
 /// K-Means clustering algorithm
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct KMeans<TX: Number, TY: Number, X: Array2<TX>, Y: Array1<TY>> {
     k: usize,
     _y: Vec<usize>,

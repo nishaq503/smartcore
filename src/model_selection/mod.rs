@@ -355,6 +355,7 @@ mod tests {
     )]
     #[test]
     fn test_cross_validate_biased() {
+        #[derive(Clone)]
         struct BiasedEstimator {}
 
         impl<X: Array2<f32>, Y: Array1<u32>, P: NoParameters> SupervisedEstimator<X, Y, P>

@@ -32,7 +32,7 @@ use crate::metrics::distance::Distance;
 
 /// Implements Linear Search algorithm, see [KNN algorithms](../index.html)
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct LinearKNNSearch<T, D: Distance<T>> {
     distance: D,
     data: Vec<T>,

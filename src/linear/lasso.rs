@@ -56,7 +56,7 @@ pub struct LassoParameters {
 }
 
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 /// Lasso regressor
 pub struct Lasso<TX: FloatNumber + RealNumber, TY: Number, X: Array2<TX>, Y: Array1<TY>> {
     coefficients: Option<X>,

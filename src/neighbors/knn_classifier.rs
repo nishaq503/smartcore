@@ -70,7 +70,7 @@ pub struct KNNClassifierParameters<T: Number, D: Distance<Vec<T>>> {
 
 /// K Nearest Neighbors Classifier
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct KNNClassifier<
     TX: Number,
     TY: Number + Ord,

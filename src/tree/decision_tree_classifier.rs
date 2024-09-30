@@ -104,7 +104,7 @@ pub struct DecisionTreeClassifierParameters {
 
 /// Decision Tree
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct DecisionTreeClassifier<
     TX: Number + PartialOrd,
     TY: Number + Ord,

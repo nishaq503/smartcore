@@ -259,7 +259,7 @@ impl<TY: Number + Ord + Unsigned> GaussianNBDistribution<TY> {
 /// GaussianNB implements the naive Bayes algorithm for data that follows the Gaussian
 /// distribution.
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub struct GaussianNB<
     TX: Number + RealNumber + RealNumber,
     TY: Number + Ord + Unsigned,

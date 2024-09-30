@@ -51,7 +51,7 @@ pub trait SupervisedEstimatorBorrow<'a, X, Y, P> {
 }
 
 /// Implements method predict that estimates target value from new data
-pub trait Predictor<X, Y> {
+pub trait Predictor<X, Y>: Clone {
     /// Estimate target values from new data.
     /// * `x` - _NxM_ matrix with _N_ observations and _M_ features in each observation.
     fn predict(&self, x: &X) -> Result<Y, Failed>;

@@ -183,7 +183,7 @@ impl<T: Number + RealNumber> Default for RidgeRegressionSearchParameters<T> {
 
 /// Ridge regression
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct RidgeRegression<
     TX: Number + RealNumber,
     TY: Number,

@@ -94,7 +94,7 @@ pub struct ElasticNetParameters {
 
 /// Elastic net
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct ElasticNet<TX: FloatNumber + RealNumber, TY: Number, X: Array2<TX>, Y: Array1<TY>> {
     coefficients: Option<X>,
     intercept: Option<TX>,

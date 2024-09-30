@@ -349,7 +349,7 @@ impl<TY: Number + Ord + Unsigned> BernoulliNBDistribution<TY> {
 /// BernoulliNB implements the naive Bayes algorithm for data that follows the Bernoulli
 /// distribution.
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub struct BernoulliNB<
     TX: Number + PartialOrd,
     TY: Number + Ord + Unsigned,

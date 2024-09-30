@@ -59,7 +59,7 @@ pub enum KNNAlgorithmName {
 }
 
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub(crate) enum KNNAlgorithm<T: Number, D: Distance<Vec<T>>> {
     LinearSearch(LinearKNNSearch<Vec<T>, D>),
     CoverTree(CoverTree<Vec<T>, D>),

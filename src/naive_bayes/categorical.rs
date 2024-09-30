@@ -335,7 +335,7 @@ impl Default for CategoricalNBSearchParameters {
 
 /// CategoricalNB implements the categorical naive Bayes algorithm for categorically distributed data.
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub struct CategoricalNB<T: Number + Unsigned, X: Array2<T>, Y: Array1<T>> {
     inner: Option<BaseNaiveBayes<T, T, X, Y, CategoricalNBDistribution<T>>>,
 }

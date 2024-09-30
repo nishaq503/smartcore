@@ -58,7 +58,7 @@ use crate::tree::decision_tree_classifier::which_max;
 
 /// DBSCAN clustering algorithm
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct DBSCAN<TX: Number, TY: Number, X: Array2<TX>, Y: Array1<TY>, D: Distance<Vec<TX>>> {
     cluster_labels: Vec<i16>,
     num_classes: usize,

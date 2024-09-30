@@ -91,7 +91,7 @@ pub struct RandomForestRegressorParameters {
 
 /// Random Forest Regressor
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct RandomForestRegressor<
     TX: Number + FloatNumber + PartialOrd,
     TY: Number,

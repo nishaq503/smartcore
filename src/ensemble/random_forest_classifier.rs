@@ -97,7 +97,7 @@ pub struct RandomForestClassifierParameters {
 
 /// Random Forest Classifier
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct RandomForestClassifier<
     TX: Number + FloatNumber + PartialOrd,
     TY: Number + Ord,

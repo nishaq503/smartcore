@@ -33,7 +33,7 @@ use crate::metrics::distance::Distance;
 
 /// Implements Cover Tree algorithm
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct CoverTree<T, D: Distance<T>> {
     base: f64,
     inv_log_base: f64,
@@ -58,7 +58,7 @@ impl<T, D: Distance<T>> PartialEq for CoverTree<T, D> {
 }
 
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct Node {
     idx: usize,
     max_dist: f64,
