@@ -104,7 +104,7 @@ impl Default for LinearRegressionParameters {
 
 /// Linear Regression
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct LinearRegression<
     TX: Number + RealNumber,
     TY: Number,
